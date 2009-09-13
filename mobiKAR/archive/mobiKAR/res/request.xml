@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : request.xml
+    Created on : 2 maj 2005, 13:41
+    Author     : MiKO
+    Description:
+        Purpose of the document follows.
+-->
+
+<!DOCTYPE request SYSTEM 'http://mobikar.net/request.dtd'>
+<request>
+    <language name="pl"/>
+    <authorization login="+48507062270" password="ala ma kota"/>
+    <browser user-agent="MOT-V980/bla bla bla"/>
+    <property name="screen-width" value="176"/>
+    <property name="screen-height" value="202"/>
+    <property name="version" value="0.0.30"/>
+    <get>
+        <song id="123"/>
+        <list offset="0" limit="11"/>
+    </get>
+</request>

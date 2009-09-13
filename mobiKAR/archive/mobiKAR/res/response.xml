@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : response.xml
+    Created on : 2 maj 2005, 13:56
+    Author     : a
+    Description:
+        Purpose of the document follows.
+-->
+
+<!DOCTYPE response SYSTEM 'http://mobikar.net/response.dtd'>
+<response>
+    <song id="0" name="Szła dzieweczka do laseczka" artist="piosenka ludowa">
+        <resource type="lyric" addr="http://mobikar.net/song/123.mlyr"/>
+        <resource type="melody" addr="http://mobikar.net/song/123.midi"/>
+        <resource type="background" addr="http://mobikar.net/song/123.png"/>
+        <resource type="adv-text" addr="http://mobikar.net/adv/43.txt"/>
+        <resource type="adv-img" addr="http://mobikar.net/adv/43.png"/>
+    </song>
+    <list offset="0" limit="11">
+        <item id="0" name="Szła dzieweczka do laseczka - piosenka ludowa"/>
+        <item id="41" name="Słodkiego miłego życia - KOMBI"/>
+    </list>
+    <notice type="ERROR">
+        <describe lang="pl">
+            Błędne parametry wywołania
+        </describe>
+    </notice>
+</response>

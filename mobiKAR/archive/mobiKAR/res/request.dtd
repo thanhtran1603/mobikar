@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary indentification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/request.dtd
+
+--><!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE request SYSTEM "request.dtd">
+
+    <request>
+    ...
+    </request>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT request (get|property|browser|authorization|language)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT language EMPTY>
+<!ATTLIST language
+    name CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT authorization EMPTY>
+<!ATTLIST authorization
+    password CDATA #IMPLIED
+    login CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT browser EMPTY>
+<!ATTLIST browser
+    user-agent CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT property EMPTY>
+<!ATTLIST property
+    value CDATA #IMPLIED
+    name CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT get (list|song)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT song EMPTY>
+<!ATTLIST song
+    id CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT list EMPTY>
+<!ATTLIST list
+    limit CDATA #IMPLIED
+    offset CDATA #IMPLIED
+  >

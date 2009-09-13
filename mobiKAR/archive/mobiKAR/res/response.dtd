@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary indentification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/response.dtd
+
+--><!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE response SYSTEM "response.dtd">
+
+    <response>
+    ...
+    </response>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT response (notice|list|song)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT song (resource)*>
+<!ATTLIST song
+    artist CDATA #IMPLIED
+    name CDATA #IMPLIED
+    id CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT resource EMPTY>
+<!ATTLIST resource
+    addr CDATA #IMPLIED
+    type CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT list (item)*>
+<!ATTLIST list
+    limit CDATA #IMPLIED
+    offset CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT item EMPTY>
+<!ATTLIST item
+    name CDATA #IMPLIED
+    id CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT notice (describe)*>
+<!ATTLIST notice
+    type CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT describe (#PCDATA)>
+<!ATTLIST describe
+    lang CDATA #IMPLIED
+  >
