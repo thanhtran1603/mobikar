@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+
+<card id='card' title='C100'>
+<p>
+
+<a href="http://217.96.6.148/_tmp/kom_val_sam_c100_pol_full.jad">KomKom</a>
+<br/>
+<a href="http://217.96.6.148/_tmp/mobiKAR_0_NOSOUND.jad">mobiKAR_0_NOSOUND</a>
+<br/>
+<a href="http://217.96.6.148/_tmp/mobiKAR_5_SEC.jad">mobiKAR_5_SEC</a>
+<br/>
+<a href="http://217.96.6.148/_tmp/TestClass.jad">TestClass</a>
+<br/>
+<a href="http://217.96.6.148/_tmp/SoundTest.jad">SoundTest</a>
+<br/>
+<a href="http://217.96.6.148/_tmp/Logik_SamC100.jad">Logik</a>
+<br/>
+<a href="http://217.96.6.148/_tmp/KeyCode.jad">1. KeyCode</a>
+<br/>
+<a href="http://217.96.6.148/_tmp/kom_std_sam_c100_pol_light.jad">2. KomKom light</a>
+<br/>
+<a href="http://217.96.6.148/_tmp/kom_std_sam_c100_pol_full.jad">3. KomKom full</a>
+<br/>
+<a href="http://217.96.6.148/_tmp/warcaby_sam_c100_pol_010901.jad">4. Warcaby </a>
+<br/>
+<a href="http://217.96.6.148/_tmp/gems_sam_c100_pol_010002.jad">5. Gems </a>
+<br/>
+<a href="http://217.96.6.148/_tmp/motorboat_sam_c100_pol_010102.jad">6. MotorBoat </a>
+<br/>
+<a href="http://217.96.6.148/_tmp/motocross_sam_c100_pol_010003.jad">7. MotorCross </a>
+<br/>
+
+</p>
+</card>
+</wml>
