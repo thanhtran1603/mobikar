@@ -1,0 +1,964 @@
+/*	
+	Nazewnictwo dla styli:
+	mk_abc_def
+	mk_ - przedrostek dla idetyfikacji styla wykorzystywanego dla mobiKARa
+	abc - identyfikacja obiektu
+	_def - przyrostek dla podobiektu
+	
+	Nazwy styli dla opisywanych obiektw:
+	pls - obszar dla listy piosenek
+	mk_pls_row - rzd w tabeli 
+	mk_pls_ftl - grny lewy naronik ramki
+	mk_pls_ftc - grna rodkowa belka ramki
+	mk_pls_ftr - grny prawy naronik ramki
+	mk_pls_fcl - rodkowy lewy naronik ramki
+	mk_pls_fcc - rodkowy obszar ramki ramki
+	mk_pls_fcr - rodkowy prawy naronik ramki
+	mk_pls_fbl - dolny lewy naronik ramki
+	mk_pls_fbc - dolna rodkowa belka ramki
+	mk_pls_fbr - dolny prawy naronik ramki
+	mk_lst - tytu piosenki na licie piosenek
+	mk_lsa - Nazwa wykonawcy piosenki
+	mk_lsh - cznik pomidzy tytuem piosenki a artyst
+	mk_ord - cay obszar zamwienia
+	mk_ord_row - rzd w tabeli 
+	mk_ord_col - kolumna w tabeli 
+	mk_otb - obszar z zakadkami
+	mk_otb_row - rzd w tabeli 
+	mk_ot0_tcs - obszar grny przed zakadkami sam rodek
+	mk_ot0_ccs - obszar rodkowy przed zakadkami sam rodek
+	mk_ot0_bcs - obszar dolny przed zakadkami sam rodek
+	mk_ot1_tls - grny lewy obszar zakadki 1
+	mk_ot1_tcs - grny rodkowy obszar zakadki 1
+	mk_ot1_trs - grny prawy obszar zakadki 1
+	mk_ot1_cls - rodkowy lewy obszar zakadki 1
+	mk_ot1_ccs - rodkowy obszar zakadki 1
+	mk_ot1_crs - rodkowy prawy obszar zakadki 1
+	mk_ot1_bls - dolny lewy obszar zakadki 1
+	mk_ot1_bcs - dolny rodkowy obszar zakadki 1
+	mk_ot1_brs - dolny prawy obszar zakadki 1
+	mk_ot1_tla - grny lewy obszar zakadki 1 aktywnej
+	mk_ot1_tca - grny rodkowy obszar zakadki 1 aktywnej
+	mk_ot1_tra - grny prawy obszar zakadki 1 aktywnej
+	mk_ot1_cla - rodkowy lewy obszar zakadki 1 aktywnej
+	mk_ot1_cca - rodkowy obszar zakadki 1 aktywnej
+	mk_ot1_cra - rodkowy prawy obszar zakadki 1 aktywnej
+	mk_ot1_bla - dolny lewy obszar zakadki 1 aktywnej
+	mk_ot1_bca - dolny rodkowy obszar zakadki 1 aktywnej
+	mk_ot1_bra - dolny prawy obszar zakadki 1 aktywnej
+
+	mk_ot2_tls - grny lewy obszar zakadki 1
+	mk_ot2_tcs - grny rodkowy obszar zakadki 1
+	mk_ot2_trs - grny prawy obszar zakadki 1
+	mk_ot2_cls - rodkowy lewy obszar zakadki 1
+	mk_ot2_ccs - rodkowy obszar zakadki 1
+	mk_ot2_crs - rodkowy prawy obszar zakadki 1
+	mk_ot2_bls - dolny lewy obszar zakadki 1
+	mk_ot2_bcs - dolny rodkowy obszar zakadki 1
+	mk_ot2_brs - dolny prawy obszar zakadki 1
+	mk_ot2_tla - grny lewy obszar zakadki 1 aktywnej
+	mk_ot2_tca - grny rodkowy obszar zakadki 1 aktywnej
+	mk_ot2_tra - grny prawy obszar zakadki 1 aktywnej
+	mk_ot2_cla - rodkowy lewy obszar zakadki 1 aktywnej
+	mk_ot2_cca - rodkowy obszar zakadki 1 aktywnej
+	mk_ot2_cra - rodkowy prawy obszar zakadki 1 aktywnej
+	mk_ot2_bla - dolny lewy obszar zakadki 1 aktywnej
+	mk_ot2_bca - dolny rodkowy obszar zakadki 1 aktywnej
+	mk_ot2_bra - dolny prawy obszar zakadki 1 aktywnej
+
+	mk_ot3_tls - grny lewy obszar zakadki 1
+	mk_ot3_tcs - grny rodkowy obszar zakadki 1
+	mk_ot3_trs - grny prawy obszar zakadki 1
+	mk_ot3_cls - rodkowy lewy obszar zakadki 1
+	mk_ot3_ccs - rodkowy obszar zakadki 1
+	mk_ot3_crs - rodkowy prawy obszar zakadki 1
+	mk_ot3_bls - dolny lewy obszar zakadki 1
+	mk_ot3_bcs - dolny rodkowy obszar zakadki 1
+	mk_ot3_brs - dolny prawy obszar zakadki 1
+	mk_ot3_tla - grny lewy obszar zakadki 1 aktywnej
+	mk_ot3_tca - grny rodkowy obszar zakadki 1 aktywnej
+	mk_ot3_tra - grny prawy obszar zakadki 1 aktywnej
+	mk_ot3_cla - rodkowy lewy obszar zakadki 1 aktywnej
+	mk_ot3_cca - rodkowy obszar zakadki 1 aktywnej
+	mk_ot3_cra - rodkowy prawy obszar zakadki 1 aktywnej
+	mk_ot3_bla - dolny lewy obszar zakadki 1 aktywnej
+	mk_ot3_bca - dolny rodkowy obszar zakadki 1 aktywnej
+	mk_ot3_bra - dolny prawy obszar zakadki 1 aktywnej
+
+	mk_ot4_tls - grny lewy obszar zakadki 1
+	mk_ot4_tcs - grny rodkowy obszar zakadki 1
+	mk_ot4_trs - grny prawy obszar zakadki 1
+	mk_ot4_cls - rodkowy lewy obszar zakadki 1
+	mk_ot4_ccs - rodkowy obszar zakadki 1
+	mk_ot4_crs - rodkowy prawy obszar zakadki 1
+	mk_ot4_bls - dolny lewy obszar zakadki 1
+	mk_ot4_bcs - dolny rodkowy obszar zakadki 1
+	mk_ot4_brs - dolny prawy obszar zakadki 1
+	mk_ot4_tla - grny lewy obszar zakadki 1 aktywnej
+	mk_ot4_tca - grny rodkowy obszar zakadki 1 aktywnej
+	mk_ot4_tra - grny prawy obszar zakadki 1 aktywnej
+	mk_ot4_cla - rodkowy lewy obszar zakadki 1 aktywnej
+	mk_ot4_cca - rodkowy obszar zakadki 1 aktywnej
+	mk_ot4_cra - rodkowy prawy obszar zakadki 1 aktywnej
+	mk_ot4_bla - dolny lewy obszar zakadki 1 aktywnej
+	mk_ot4_bca - dolny rodkowy obszar zakadki 1 aktywnej
+	mk_ot4_bra - dolny prawy obszar zakadki 1 aktywnej
+
+	
+	// standarowe nuce zadzanie ukadania zakadek
+
+*/
+body{
+    margin: 1px; 
+    padding: 1px; 
+	background-color:#e7f6ff;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+table{
+    border-width: 0px; 
+    outline-width: 0px; 
+    border-collapse: collapse;
+}
+table, td, tr {
+    margin: 0px;  
+    padding: 0px; 
+	vertical-align:top;
+	text-align:left;	
+}
+
+div.mk_pls{
+}
+table.mk_pls /* list songs */ { 
+}
+tr.mk_pls_row{ 
+}
+td.mk_pls_ftl{ 
+}
+td.mk_pls_ftc{ 
+}
+td.mk_pls_ftr{ 
+}
+
+td.mk_pls_fcl{ 
+}
+td.mk_pls_fcc{ 
+}
+td.mk_pls_fcr{ 
+}
+td.mk_pls_fbl{ 
+}
+td.mk_pls_fbc{ 
+}
+td.mk_pls_fbr{ 
+}
+a.mk_lst /* song title*/ { 
+	background-image: url(img/ico.gif);
+	background-repeat: no-repeat; 
+	padding-left: 15px;
+	color: #ff6600; 
+	text-decoration: underline; 
+	font-family: Arial, Helvetica, Sans Serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+a.mk_lsa /* song artist */ { 
+	color: #333333; 
+	text-decoration: underline; 
+	font-family: Arial, Helvetica, Sans Serif;
+	font-size: 11px;
+}
+span.mk_lsh /* hypen */ { 
+	background-image: url(img/hyp.gif); 
+	background-repeat: no-repeat; 
+	background-position: center; 
+	padding-right: 2px; 
+	padding-left: 2px; 
+}
+
+/* Orders */
+
+div.mk_ord{
+}
+table.mk_ord{ 
+	width: 100%;
+    margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+	border-spacing: 0px; 
+	border-collapse: collapse;
+}
+tr.mk_ord_row{
+}
+td.mk_ord_col{
+}
+div.mk_otb{
+}
+table.mk_otb{ 
+    margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+	border-spacing: 0px; 
+	border-collapse: collapse;
+}
+table.mk_otb /* orders tabs*/{
+	width: auto;
+    margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+	border-spacing: 0px; 
+	border-collapse: collapse;
+}
+tr.mk_otb_row{
+	margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+}
+td.mk_ot0_tcs{ 
+	background-color: #fff;
+	width: 8px;
+	margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+}
+td.mk_ot0_ccs{ 
+	background-color: #fff;
+	width: 8px;
+	margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+}
+td.mk_ot0_bcs{ 
+	background-color: #fff;
+    width: 8px; 
+	margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+}
+
+td.mk_ot1_tls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1_tl.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot1_tcs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1_tc.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot1_trs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1_tr.png); 
+	width: 8px;
+	height: 8px;
+}
+/* center */
+td.mk_ot1_cls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1_cl.png); 
+	width: 8px;
+}
+td.mk_ot1_ccs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-color: #8885bc;
+}
+a.mk_ot1_ccs{ 
+    color: white; 
+    font-weight: bold; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    margin: 0 10px 0 10px; 
+}
+td.mk_ot1_crs{ 
+    margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+    background-image: url(img/t1_cr.png); 
+    width: 8px; 
+}
+td.mk_ot1_bls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1_bl.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot1_bcs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1_bc.png); 
+	height: 4px;
+}
+td.mk_ot1_brs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1_br.png); 
+	width: 8px;
+	height: 4px;
+}
+/* activated */
+td.mk_ot1_tla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1a_tl.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot1_tca{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1a_tc.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot1_tra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1a_tr.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot1_cla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1a_cl.png); 
+	width: 8px;
+}
+td.mk_ot1_cca{ 
+	background-color: #e8c23c;
+	margin: 50 100px 50 100px; 
+}
+a.mk_ot1_cca{ 
+    color: white; 
+    font-weight: bold; font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 0 10px 0 10px; 
+}
+td.mk_ot1_cra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1a_cr.png); 
+	width: 8px;
+}
+td.mk_ot1_bla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1a_bl.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot1_bca{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1a_bc.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot1_bra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1a_br.png); 
+	width: 8px;
+	height: 4px;
+}
+/* tab 2 */
+
+td.mk_ot2_tls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2_tl.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot2_tcs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2_tc.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot2_trs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2_tr.png); 
+	width: 8px;
+	height: 8px;
+}
+/* center */
+td.mk_ot2_cls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2_cl.png); 
+	width: 8px;
+}
+td.mk_ot2_ccs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-color: #8885bc;
+}
+a.mk_ot2_ccs{ 
+    color: white; 
+    font-weight: bold; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    margin: 0 10px 0 10px; 
+}
+td.mk_ot2_crs{ 
+    margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+    background-image: url(img/t2_cr.png); 
+    width: 8px; 
+}
+td.mk_ot2_bls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2_bl.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot2_bcs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2_bc.png); 
+	height: 4px;
+}
+td.mk_ot2_brs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2_br.png); 
+	width: 8px;
+	height: 4px;
+}
+/* activated */
+td.mk_ot2_tla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2a_tl.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot2_tca{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2a_tc.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot2_tra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2a_tr.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot2_cla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2a_cl.png); 
+	width: 8px;
+}
+td.mk_ot2_cca{ 
+	background-color: #e8c23c;
+	margin: 50 100px 50 100px; 
+}
+a.mk_ot2_cca{ 
+    color: white; 
+    font-weight: bold; font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 0 10px 0 10px; 
+}
+td.mk_ot2_cra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2a_cr.png); 
+	width: 8px;
+}
+td.mk_ot2_bla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2a_bl.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot2_bca{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2a_bc.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot2_bra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2a_br.png); 
+	width: 8px;
+	height: 4px;
+}
+/* tab 3 */
+
+td.mk_ot3_tls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3_tl.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot3_tcs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3_tc.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot3_trs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3_tr.png); 
+	width: 8px;
+	height: 8px;
+}
+/* center */
+td.mk_ot3_cls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3_cl.png); 
+	width: 8px;
+}
+td.mk_ot3_ccs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-color: #8885bc;
+}
+a.mk_ot3_ccs{ 
+    color: white; 
+    font-weight: bold; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    margin: 0 10px 0 10px; 
+}
+td.mk_ot3_crs{ 
+    margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+    background-image: url(img/t3_cr.png); 
+    width: 8px; 
+}
+td.mk_ot3_bls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3_bl.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot3_bcs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3_bc.png); 
+	height: 4px;
+}
+td.mk_ot3_brs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3_br.png); 
+	width: 8px;
+	height: 4px;
+}
+/* activated */
+td.mk_ot3_tla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3a_tl.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot3_tca{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3a_tc.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot3_tra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3a_tr.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot3_cla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3a_cl.png); 
+	width: 8px;
+}
+td.mk_ot3_cca{ 
+	background-color: #e8c23c;
+	margin: 50 100px 50 100px; 
+}
+a.mk_ot3_cca{ 
+    color: white; 
+    font-weight: bold; font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 0 10px 0 10px; 
+}
+td.mk_ot3_cra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3a_cr.png); 
+	width: 8px;
+}
+td.mk_ot3_bla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3a_bl.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot3_bca{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3a_bc.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot3_bra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3a_br.png); 
+	width: 8px;
+	height: 4px;
+}
+/* tab 4 */
+
+td.mk_ot4_tls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4_tl.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot4_tcs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4_tc.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot4_trs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4_tr.png); 
+	width: 8px;
+	height: 8px;
+}
+/* center */
+td.mk_ot4_cls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4_cl.png); 
+	width: 8px;
+}
+td.mk_ot4_ccs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-color: #8885bc;
+}
+a.mk_ot4_ccs{ 
+    color: white; 
+    font-weight: bold; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    margin: 0 10px 0 10px; 
+}
+td.mk_ot4_crs{ 
+    margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+    background-image: url(img/t4_cr.png); 
+    width: 8px; 
+}
+td.mk_ot4_bls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4_bl.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot4_bcs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4_bc.png); 
+	height: 4px;
+}
+td.mk_ot4_brs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4_br.png); 
+	width: 8px;
+	height: 4px;
+}
+/* activated */
+td.mk_ot4_tla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4a_tl.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot4_tca{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4a_tc.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot4_tra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4a_tr.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot4_cla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4a_cl.png); 
+	width: 8px;
+}
+td.mk_ot4_cca{ 
+	background-color: #e8c23c;
+	margin: 50 100px 50 100px; 
+}
+a.mk_ot4_cca{ 
+    color: white; 
+    font-weight: bold; font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 0 10px 0 10px; 
+}
+td.mk_ot4_cra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4a_cr.png); 
+	width: 8px;
+}
+td.mk_ot4_bla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4a_bl.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot4_bca{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4a_bc.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot4_bra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4a_br.png); 
+	width: 8px;
+	height: 4px;
+}
+
+/* frame order */
+tr.mk_fo /* frame */{ 
+}
+
+td.mk_fotl /* frame top left*/{ 
+	background-image: url(img/fr_lt_01.gif); 
+	height: 25px;
+	width: 25px;
+}
+td.mk_fotc /* frame top */{ 
+	background-image: url(img/fr_t_01.gif); 
+	background-repeat: repeat-x; 
+	height: 25px; 
+	width: auto; 
+}
+td.mk_fotr /* frame right top*/ { 
+	background-image: url(img/fr_rt_01.gif); 
+	height: 25px;
+	width: 25px;
+}
+
+td.mk_focl /* frame left */ { 
+	background-image: url(img/fr_l_01.gif); 
+	height: auto;
+	width: 25px;
+}
+td.mk_focc /* frame center */ { 
+	background-image: url(img/fr_c_01.gif); 
+	height: auto;
+	width: auto;
+}
+td.mk_focr /* frame right */ { 
+	background-image: url(img/fr_r_01.gif); 
+	height: auto;
+	width: 25px;
+}
+td.mk_fobl /* frame left bottom*/{ 
+	background-image: url(img/fr_lb_01.gif); 
+	height: 25px;
+	width: 25px;
+}
+td.mk_fobc /* frame bottom */{ 
+	background-image: url(img/fr_b_01.gif); 
+	background-repeat: repeat-x; 
+	height: 25px; 
+	width: auto; 
+}
+td.mk_fobr /* frame right bottom*/ { 
+	background-image: url(img/fr_rb_01.gif); 
+	height: 25px;
+	width: 25px;
+}
+/* Order phone preview and info */
+table.mk_o{
+    margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+	border-spacing: 0px; 
+	border-collapse: collapse;
+}
+tr.mk_o /* frame */{ 
+}
+
+td.mk_op /* order phone preview */ { 
+    background-image: url(img/phone-sms.png); 
+    background-repeat: no-repeat; 
+    width: 110px; 
+    height: 47px; 
+    vertical-align: top;
+    padding-top: 95px; 
+    padding-left: 40px; 
+    color: black; 
+    font-size: 11px; 
+    font-weight: bold; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+}
+td.mk_oi /* order instruction */ { 
+    width: auto; 
+    height: auto; 
+    padding-left: 10px; 
+    color: black; 
+    font-size: 11px; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+}
+div.oa /* operator available*/{
+	background-color: #123;
+	color: #aaa;
+}
+div.pr /* payment*/{
+	background-color: #345;
+	color: #ccc;
+}
+div.ph /* phones*/{
+	background-color: #567;
+	color: #888;
+}
+div.h /* help*/{
+	background-color: #864;
+	color: #aaa;
+}
+
+
+/***************************
+Okienko z zamwieniem
+****************************/
+div#mk_tab_nojs{
+	background-color:#FFFF33;
+	color:#003399;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+}
+div.clr{
+	clear: both;
+}
+div.mk_tab_menu{
+	float:right;
+	width:100%;
+	background-color:#ffae00;
+}
+
+ul#mk_tab_menu{
+	background-color:#ffae00;
+	width: 400px;
+	float: left;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 0.8em;
+}
+
+ul#mk_tab_menu li{
+	display: block;
+	background-image: url(img/mobiKAR-button.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	float: left;
+	margin: 0px;
+	width: 100px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size: 14px;
+	line-height: 30px;
+	white-space: nowrap;
+	text-align:center;	
+
+}
+
+ul#mk_tab_menu li a
+{
+	width: 100%;
+	display: block;
+	text-decoration: underline;
+	color:#FFF;
+	background: transparent;
+}
+
+ul#mk_tab_menu li a:hover
+{
+	color: #ffcc00;
+}
+
+ul#mk_tab_menu li a#mk_tab_menu_sms{
+	color:#FFF;
+}
+ul#mk_tab_menu li a#mk_tab_menu_cheaper{
+	color:#FFF;
+}
+ul#mk_tab_menu li a#mk_tab_menu_targets{
+	color:#FFF;
+}
+ul#mk_tab_menu li a#mk_tab_menu_help{
+	color:#FFF;
+}
+
+div.mk_tab_body{
+	width:100%;
+}
+div.mk_tab_order{
+	background-color:#FFFF00;
+	float:left;
+	width:162px;
+	margin-right: 15px;
+	clear: left;
+	display: block;
+	text-align:center;
+}
+.mk_tab_content{
+	float: none;
+	overflow: auto;
+	position: relative;
+	visibility:visible;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+.mk_tab_content_visible{
+	float: left;
+	overflow: visible;
+	position: absolute;
+	visibility:visible;
+	top: 32px;
+}
+.mk_tab_content_visible ul li {
+	font-weight:bold;
+}
+.mk_tab_content_hidden{
+	float: left;
+	overflow: visible;
+	position: absolute;
+	visibility: hidden;
+}
+div#mk_tab_sms{
+}
+div#mk_tab_cheaper{
+}
+div#mk_tab_targets{
+}
+div#mk_tab_help{
+}
+span.mk_tab_order_sms_code{
+	font-weight:bold;
+	font-size:14px;
+}
+span.mk_tab_order_sms_number{
+	font-weight:bold;
+	font-size:14px;
+}
+span.mk_tab_order_sms_cost{
+	font-style:italic;
+}
+span.mk_tab_order_all_cost{
+	font-weight:bold;
+	font-size:14px;
+}
+
+span.mk_tab_order_all_href{
+	font-weight:bold;
+	font-size:14px;
+}
+div.mk_tab_help_preview{
+	width:162px;
+	height:227px;
+	background: url(img/mobile.KARAOKE-zamowienie.gif);
+}
+div#mk_tab_highlight_sms{
+}
+div#mk_tab_highlight_order{
+}
+div#mk_tab_highlight_targets{
+}
+div#mk_tab_highlight_order{
+}
+div.mk_tab_highlight{
+	width:162px;
+	height:310px;
+	float: left;
+	background-position:bottom;
+	background-repeat:no-repeat;
+	background-color:#FFFF55;
+	background-image: url(img/mobile.KARAOKE-zamowienie.gif);
+	text-align:center;
+	margin-right:10px;
+}

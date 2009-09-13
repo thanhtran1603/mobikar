@@ -1,0 +1,4 @@
+ALTER TABLE `tab_payment` ADD `activated` TIMESTAMP AFTER `added` ;
+ALTER TABLE `tab_payment` ADD `id_product` INT DEFAULT '1' NOT NULL AFTER `activated` ;
+
+ALTER TABLE `tab_payment` ADD INDEX ( `id_product` ) ;

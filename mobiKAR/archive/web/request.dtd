@@ -1,0 +1,43 @@
+<!ELEMENT request (get|property|browser|authorization|language)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT language EMPTY>
+<!ATTLIST language
+    name CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT authorization EMPTY>
+<!ATTLIST authorization
+    password CDATA #IMPLIED
+    login CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT browser EMPTY>
+<!ATTLIST browser
+    user-agent CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT property EMPTY>
+<!ATTLIST property
+    value CDATA #IMPLIED
+    name CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT get (list|song)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT song EMPTY>
+<!ATTLIST song
+    id CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT list EMPTY>
+<!ATTLIST list
+    limit CDATA #IMPLIED
+    offset CDATA #IMPLIED
+  >

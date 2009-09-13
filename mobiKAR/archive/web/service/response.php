@@ -1,0 +1,32 @@
+<?php
+ob_start();
+include ("../scripts/myErrorHandler.php");
+$postdata = file_get_contents("php://input");
+trigger_error('content: '.$postdata, E_USER_NOTICE);
+$postdata_clear = htmlentities($postdata);
+ob_end_clean();
+header( "Content-type: text/html" );
+echo "<?xml version='1.0'?>\n";
+echo "<!DOCTYPE response SYSTEM 'http://mobikar.net/response.dtd'>\n";
+echo "<!--";
+echo $postdata_clear;
+echo "-->";
+echo "<response>\n";
+echo "    <song id='0' name'Szła dzieweczka do laseczka' artist='piosenka ludowa'>\n";
+echo "        <resource type='lyric' addr='http://mobikar.net/song/123.mlyr'/>\n";
+echo "        <resource type='melody' addr='http://mobikar.net/song/123.midi'/>\n";
+echo "        <resource type='background' addr='http://mobikar.net/song/123.png'/>\n";
+echo "        <resource type='adv-text' addr='http://mobikar.net/adv/43.txt'/>\n";
+echo "        <resource type='adv-img' addr='http://mobikar.net/adv/43.png'/>\n";
+echo "    </song>\n";
+echo "    <list offset='0' limit='11'>\n";
+echo "        <item id='0' name='Sz�a dzieweczka do laseczka - piosenka ludowa'/>\n";
+echo "        <item id='41' name='S�odkiego mi�ego �ycia - KOMBI'/>\n";
+echo "    </list>\n";
+//echo "    <notice type='ERROR: Service unavailable'>\n";
+//echo "        <describe lang='pl'>\n";
+//echo "            Problem w obsludze. Prosze sprobowac w innym terminie\n";
+//echo "        </describe>\n";
+//echo "    </notice>\n";
+echo "</response>\n";
+?>

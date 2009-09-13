@@ -1,0 +1,7 @@
+<!DOCTYPE response SYSTEM 'http://mobikar.net/response.dtd'>
+<response>
+    <song id='0' name='Sz³a dzieweczka do laseczka' artist='piosenka ludowa'>
+        <resource type='lyric' addr='http://localhost/dzieweczka.mlyr'/>
+        <resource type='melody' addr='http://localhost/dzieweczka.midi'/>
+    </song>
+</response>

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--
+Array
+(
+    [request] => GetOrder
+    [format] => xhtml
+    [css] => http://localhost/mambo/templates/mobikar/css/mobikar.css
+    [product] => 78
+)
+par_product:78
+_GET['product']:78
+-->
+<head>
+<title>Test zakładek</title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<script type='text/javascript' src='pay.js'></script>
+<link rel="stylesheet" type="text/css" title="CSS" href="mobikar.css"/>
+</head>
+<body onload='init();'> 
+<div id='mk_tab_nojs'> Ładowanie JavaScript </div> 
+<div class='mk_tab_menu'> 
+  <ul id='mk_tab_menu'> 
+    <li><a id='mk_tab_menu_sms' href="javascript:setTab('sms')">SMS</a></li> 
+    <li><a id='mk_tab_menu_cheaper' href="javascript:setTab('cheaper')">Taniej</a></li> 
+    <li><a id='mk_tab_menu_targets' href="javascript:setTab('targets')">Telefony</a></li> 
+    <li><a id='mk_tab_menu_help' href="javascript:setTab('help')">Pomoc</a></li> 
+  </ul> 
+</div> 
+<div class='clr'></div> 
+<div class='mk_tab_body'> 
+  <div class='mk_tab_content' id='mk_tab_sms'> 
+    <div class='mk_tab_highlight' id='mk_tab_highlight_sms'> Wyślij wiadomość SMS o treści <br/> 
+      <span class='mk_tab_order_sms_code'>AP.MOBIKAR </span><br/> 
+      na numer <br/> 
+      <span class='mk_tab_order_sms_number'>7568 </span><br/> 
+      <span class='mk_tab_order_sms_cost'>Cena 6,10 zł</span><br/> 
+    </div> 
+    Aby otrzymać aplikację mobiKAR zawierającą piosenkę
+    <ul> 
+<li>Um&#xf3;wi&#x142;em sie z ni&#x105; na 9t&#x105; - Bohdan &#x141;azuka</li>
+    </ul> 
+    wyślij wiadomość SMS o treści AP.MOBIKAR na numer 7568. <br/> 
+	W zamian otrzymasz w zwrotnej wiadomości SMS kod, który należy wprowadzić na stronie http://wap.mobikar.net<br/>
+	Wprowadzenie kodu umożliwi Ci pobranie aplikacji mobiKAR wprost do Twojego telefonu.<br/>
+	Koszt wysłania wiadomości SMS na numer 7568 wynosi 6,10 zł. <br/>
+	Wybierając odnośnik <a href='javascript:setTab('cheaper')'>Taniej</a> dowiesz się jak taniej otrzymać aplikację mobiKAR.<br/>
+	Pod odnośnikiem <a href='javascript:setTab('targets')'>Telefony</a> znajdziesz spis telefonów, które są gotowe do odpalenia aplikacji.<br/>
+	<a href='javascript:setTab('help')'>Pomoc</a> zawiera dokładny opis zamawiania, pobierania i uruchamiania aplikacji mobiKAR.<br>
+	Usługa działa w sieciach operatorów: Plus GSM, Era, Idea. Właścicielem serwisu jest <a href='http://www.m1k0.com' target='_blank'>M1K0</a>. Serwis SMS obsługuje <a href='http://www.allpay.pl' target='_blank'>AllPay.pl</a>.<br/>
+	Dziękujemy za wybór naszego mobilnego KARAOKE.
+  </div> 
+  <div class='mk_tab_content' id='mk_tab_cheaper'> 
+  	<div class='mk_tab_order'> Zapłać tylko<br/> 
+      <span class='mk_tab_order_all_cost'>3,99 zł</span><br/> 
+      płącąc przelewem <br/> 
+      dzięki usłudze <br/> 
+      <span class='mk_tab_order_all_href'><a href='https://ssl.allpay.pl/?id=3595&code=mobikar' target='_blank'>płać z AllPay</a></span><br/> 
+    </div> 
+  	Najtańszymi sposobemi otrzymania aplikacji mobiKAR są płatność poprzez przelew bankowy, płatność kartą, transfer międzybankowy 
+	a także inne sposoby płaności udostępniane poprzez AllPay.pl.<br/>
+	Wybierając odnośnik <a href='https://ssl.allpay.pl/?id=3595&code=mobikar' target='_blank'>płać z AllPay</a> 
+	zostanie załadowana szyfrowana, bezpieczna strona serwisu AllPay.pl. Serwis ten umożliwia przeprowadzenie płatności za aplikację mobiKAR na wiele różnych sposobów.
+	Poniżej lista sposobów płatności:<br/>
+	Karta VISA, MasterCard, EuroCard, JCB, Diners Club, mTransfer (mBank), Płacę z Inteligo (konto Inteligo), MultiTransfer (MultiBank), AllPay Transfer (AllPay.pl), Przelew24 (BZWBK), ING Bank Śląski, Przekaz/Przelew bankowy, SEZAM (Bank Przemysłowo-Handlowy BPH SA), Pekao24 (Bank Pekao S.A.), MilleNet (Millennium Bank), Deutsche Bank PBC S.A., Kredyt Bank S.A. (KB24), Inteligo (Bank PKO BP), Lukas Bank.
+  </div> 
+  <div class='mk_tab_content' id='mk_tab_targets'> 
+	<div class='mk_tab_order'> 
+		Telefony z profilem<br/> 
+      <span class='mk_tab_order_all_cost'>MIDP 2.0</span><br/> 
+      lub zgodne z <br/> 
+      <span class='mk_tab_order_all_cost'>MMAPI 1.0</span><br/> 
+    </div>   
+	mobiKAR jest multimedialną aplikacją dla środowiska JAVA. 
+	<br/>
+	Telefony muszą jeszcze posiadać wsparcie dla obsługi dżwięków w środowisku JAVA.
+	<br/>
+	Telefony z profilem JAVA MIDP 2.0 posiadają pełne wsparcie do dźwięków realizaowane przez MMAPI 1.1.
+	<br/>
+	Również telefony z JAVA MIDP 1.0 również mogą posiadać wsparcie w postaci MMAPI 1.0.
+	<br/>
+	MMAPI (MultiMedia API) opisywane jest również jako JSR 135.
+	<br/>
+	Poniżej lista znanych modeli telefonów, które posiadają wsparcie dla multimediów:
+	<br/>
+	<strong>Motorola:</strong> A630, A668, A760, A768, A780, A845, C380, C385, C650, C975, C980, E1000, E398, E550, E680, T725, V180, V186, V220, V3, V300, V303, V330, V400, V500, V501, V505, V525, V536, V545, V547, V550, V551, V555, V557, V600, V620, V635, V690, V80, V878, V975, V980;
+	<br/>
+	<strong>Nokia:</strong> 3220, 3650, 5140, 6020, 6170, 6220, 6230, 6260, 6600, 6620, 6630, 6638, 6670, 7260, 7270, 7280, 7610, N-Gage;
+	<br/>
+	<strong>SAMSUNG:</strong> D500, E700, E800, D710;
+	<br/>
+	<strong>Siemens:</strong> C65, C66, CFX65, CX65, CX70, M65, S65, S66, SK65, SL65, SX1;
+	<br/>
+	<strong>SonyEricsson:</strong> T610, T630, K300, K500, K700, P800, P900, P908, P910, S700, S710, V800, Z1010, Z500.
+  </div> 
+  <div class='mk_tab_content' id='mk_tab_help'>
+	<div class='mk_tab_order'> 
+		Obszerna pomoc<br/> 
+		jest dostępna na<br/> 
+      <span class='mk_tab_order_all_cost'>www.mobikar.net</span><br/> 
+      a także na <br/> 
+      <span class='mk_tab_order_all_cost'>wap.mobikar.net</span><br/> 
+    </div>   
+   Pomoc do płatności 
+   </div> 
+</div> 
+</body>
+</html>
+
+

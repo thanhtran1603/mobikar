@@ -1,0 +1,14 @@
+body  {
+	background-color: #6c6c6c;
+	border-width: 12px }
+h1 {
+	color: white;
+	font-size: large;
+	font-weight: bold;
+	margin: 0.67em 0 }
+.tekst  {
+	color: white;
+	font-weight: bold;
+	background-color: #b6b6b6 }
+.text_red {color: red }
+.text_blue {color: blue }

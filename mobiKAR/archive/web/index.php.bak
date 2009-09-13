@@ -1,0 +1,10 @@
+<?php
+	 //error_reporting(E_ERROR | E_WARNING | E_PARSE);
+	 if (strstr($_SERVER['HTTP_ACCEPT'],'text/vnd.wap.wml') == FALSE ){
+	 	header('Location: /rich/');
+	 	return;
+	 }
+	 else{
+	 	header('Location: /index.wml');
+	 	return;
+	}

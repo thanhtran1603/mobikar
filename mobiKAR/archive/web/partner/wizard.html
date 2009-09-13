@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>mobiKAR.net - mobile KARAOKE</title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<link rel="stylesheet" type="text/css" title="CSS" href="mobikar.css"/>
+<script type='text/javascript' src='wizard.js'></script>
+</head>
+<body onload='init();'>
+<div id='mk_tab_nojs'> Ładowanie JavaScript </div>
+<div class='mk_tab_menu'>
+  <ul id='mk_tab_menu'>
+    <li><a id='mk_tab_menu_load' href="javascript:setTab('load')">Wczytaj</a></li>
+    <li><a id='mk_tab_menu_edit' href="javascript:setTab('edit')">Edytuj</a></li>
+    <li><span id='mk_tab_menu_getit' >Pobierz</span></li>
+    <li><a id='mk_tab_menu_help' href="javascript:setTab('help')">Pomoc</a></li>
+  </ul>
+</div>
+<div class="clr"/>
+<div class="mk_tab_body">
+  <div class="mk_tab_content" id="mk_tab_load">
+    	Wgraj plik KARAOKE (format MIDI z tekstem w jednym pliku)
+		<form enctype="multipart/form-data" action="" method="post">
+			<p>
+			  <input type="hidden" name="request" value="upload_kar"/>
+			  <input type="file" name="file_kar"/>
+			  <br/>
+			  <input type="submit" name="submit_kar" value="Przetwórz >>"/>
+			</p>
+		</form>
+		<a style="font-weight:bold; text-decoration:underline" href="javascript:load_advanced()"> Dla zaawansowanych </a>
+		<div id="mk_tab_load_adv" style="background-color:#CCCCCC; width:auto; display:none">
+			<p> Wgraj muzyke i tekst w osobnych plikach</p>
+			<form enctype="multipart/form-data" action="wizard.php" method="post">
+				<input type="hidden" name="request" value="upload_mlyr"/>
+				<input type="hidden" name="dir" value="dir"/>
+
+				<label> plik MIDI
+					<input type="file" name="file_midi"/>
+				</label>
+				<br/>
+				<label> plik mLYR
+					<input type="file" name="file_mlyr"/>
+				</label>
+				<br/>
+				<input type="submit" name="submit_mlyr" value="Przetwórz >>"/>
+
+			</form>
+		</div>
+  </div>
+  <div class="mk_tab_content" id="mk_tab_edit">
+    Przeedytuj słowa piosenki
+    <form name="mk_tab_edit_form" id="mk_tab_edit_form" method="post" action="" >
+      <textarea name="textarea" cols="64" rows="16" disabled="disabled">Piosenka jeszcze nie załadowana</textarea>
+	  <br/>
+	  <input name="submit_edit" type="submit" value="Przetwórz >>" disabled="disabled"/>
+    </form>
+  </div>
+  <div class="mk_tab_content" id="mk_tab_getit">
+	  Aby pobrać gotową aplikację mobiKAR z przygotowaną piosenką wejdź przeglądarką internetową swojego telefonu
+	  na adres http://wap.mobikar.net/wizard/h4g6j45
+	  <br/>
+	  Zachęcamy również do zakupu następujących piosenek:....
+
+  </div>
+
+  <div class="mk_tab_content" id="mk_tab_help">
+	Pomoc do płatności
+		Obszerna pomoc<br/>
+		jest dostępna na<br/>
+      <span class="mk_tab_order_all_cost">www.mobikar.net</span><br/>
+      a także na <br/>
+      <span class="mk_tab_order_all_cost">wap.mobikar.net</span><br/>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+body  {
+	color: #000;
+	font-size: small;
+	background-color: #fd5;
+	margin: 0 }
+fieldset  {
+	color: #000;
+	font-size: small;
+	background-color: #fd5;
+	margin: 0 }
+	
+img {padding: 0px;}
+ul { color: #b00; font-weight: bold; margin-top: 0; margin-bottom: 0    }
+a { color: #05f; font-weight: bold; text-decoration: underline   }
+a:active { background-color: #05f; color: #fd5; }
+h1 {
+	font-size: medium;
+	font-weight: bold;
+	background-color: #18f;
+	text-align: center 
+}
+h2  {
+	font-size: small;
+	font-weight: bold;
+	background-color: #e99;
+	text-align: center 
+}
+.areaHead  { text-align: center }
+.areaFoot  { background-color: #18f; font-weight: bold; text-align: center   }	

@@ -1,0 +1,1 @@
+ALTER TABLE `tab_payment` ADD `activated` TIMESTAMP AFTER `added` ;

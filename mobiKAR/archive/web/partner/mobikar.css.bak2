@@ -1,0 +1,814 @@
+/*
+	Nazewnictwo dla styli:
+	mk_abc_def
+	mk_ - przedrostek dla idetyfikacji styla wykorzystywanego dla mobiKARa
+	abc - identyfikacja obiektu
+	_def - przyrostek dla podobiektu
+	
+	Nazwy styli dla opisywanych obiektów:
+	pls - obszar dla listy piosenek
+	mk_pls_row - rz¹d w tabeli 
+	mk_pls_ftl - górny lewy naro¿nik ramki
+	mk_pls_ftc - górna œrodkowa belka ramki
+	mk_pls_ftr - górny prawy naro¿nik ramki
+	mk_pls_fcl - œrodkowy lewy naro¿nik ramki
+	mk_pls_fcc - œrodkowy obszar ramki ramki
+	mk_pls_fcr - œrodkowy prawy naro¿nik ramki
+	mk_pls_fbl - dolny lewy naro¿nik ramki
+	mk_pls_fbc - dolna œrodkowa belka ramki
+	mk_pls_fbr - dolny prawy naro¿nik ramki
+	mk_lst - tytu³ piosenki na liœcie piosenek
+	mk_lsa - Nazwa wykonawcy piosenki
+	mk_lsh - ³¹cznik pomiêdzy tytu³em piosenki a artyst¹
+	mk_ord - ca³y obszar zamówienia
+	mk_ord_row - rz¹d w tabeli 
+	mk_ord_col - kolumna w tabeli 
+	mk_otb - obszar z zak³adkami
+	mk_otb_row - rz¹d w tabeli 
+	mk_ot0_tcs - obszar górny przed zak³adkami sam œrodek
+	mk_ot0_ccs - obszar œrodkowy przed zak³adkami sam œrodek
+	mk_ot0_bcs - obszar dolny przed zak³adkami sam œrodek
+	mk_ot1_tls - górny lewy obszar zak³adki 1
+	mk_ot1_tcs - górny œrodkowy obszar zak³adki 1
+	mk_ot1_trs - górny prawy obszar zak³adki 1
+	mk_ot1_cls - œrodkowy lewy obszar zak³adki 1
+	mk_ot1_ccs - œrodkowy obszar zak³adki 1
+	mk_ot1_crs - œrodkowy prawy obszar zak³adki 1
+	mk_ot1_bls - dolny lewy obszar zak³adki 1
+	mk_ot1_bcs - dolny œrodkowy obszar zak³adki 1
+	mk_ot1_brs - dolny prawy obszar zak³adki 1
+	mk_ot1_tla - górny lewy obszar zak³adki 1 aktywnej
+	mk_ot1_tca - górny œrodkowy obszar zak³adki 1 aktywnej
+	mk_ot1_tra - górny prawy obszar zak³adki 1 aktywnej
+	mk_ot1_cla - œrodkowy lewy obszar zak³adki 1 aktywnej
+	mk_ot1_cca - œrodkowy obszar zak³adki 1 aktywnej
+	mk_ot1_cra - œrodkowy prawy obszar zak³adki 1 aktywnej
+	mk_ot1_bla - dolny lewy obszar zak³adki 1 aktywnej
+	mk_ot1_bca - dolny œrodkowy obszar zak³adki 1 aktywnej
+	mk_ot1_bra - dolny prawy obszar zak³adki 1 aktywnej
+
+	mk_ot2_tls - górny lewy obszar zak³adki 1
+	mk_ot2_tcs - górny œrodkowy obszar zak³adki 1
+	mk_ot2_trs - górny prawy obszar zak³adki 1
+	mk_ot2_cls - œrodkowy lewy obszar zak³adki 1
+	mk_ot2_ccs - œrodkowy obszar zak³adki 1
+	mk_ot2_crs - œrodkowy prawy obszar zak³adki 1
+	mk_ot2_bls - dolny lewy obszar zak³adki 1
+	mk_ot2_bcs - dolny œrodkowy obszar zak³adki 1
+	mk_ot2_brs - dolny prawy obszar zak³adki 1
+	mk_ot2_tla - górny lewy obszar zak³adki 1 aktywnej
+	mk_ot2_tca - górny œrodkowy obszar zak³adki 1 aktywnej
+	mk_ot2_tra - górny prawy obszar zak³adki 1 aktywnej
+	mk_ot2_cla - œrodkowy lewy obszar zak³adki 1 aktywnej
+	mk_ot2_cca - œrodkowy obszar zak³adki 1 aktywnej
+	mk_ot2_cra - œrodkowy prawy obszar zak³adki 1 aktywnej
+	mk_ot2_bla - dolny lewy obszar zak³adki 1 aktywnej
+	mk_ot2_bca - dolny œrodkowy obszar zak³adki 1 aktywnej
+	mk_ot2_bra - dolny prawy obszar zak³adki 1 aktywnej
+
+	mk_ot3_tls - górny lewy obszar zak³adki 1
+	mk_ot3_tcs - górny œrodkowy obszar zak³adki 1
+	mk_ot3_trs - górny prawy obszar zak³adki 1
+	mk_ot3_cls - œrodkowy lewy obszar zak³adki 1
+	mk_ot3_ccs - œrodkowy obszar zak³adki 1
+	mk_ot3_crs - œrodkowy prawy obszar zak³adki 1
+	mk_ot3_bls - dolny lewy obszar zak³adki 1
+	mk_ot3_bcs - dolny œrodkowy obszar zak³adki 1
+	mk_ot3_brs - dolny prawy obszar zak³adki 1
+	mk_ot3_tla - górny lewy obszar zak³adki 1 aktywnej
+	mk_ot3_tca - górny œrodkowy obszar zak³adki 1 aktywnej
+	mk_ot3_tra - górny prawy obszar zak³adki 1 aktywnej
+	mk_ot3_cla - œrodkowy lewy obszar zak³adki 1 aktywnej
+	mk_ot3_cca - œrodkowy obszar zak³adki 1 aktywnej
+	mk_ot3_cra - œrodkowy prawy obszar zak³adki 1 aktywnej
+	mk_ot3_bla - dolny lewy obszar zak³adki 1 aktywnej
+	mk_ot3_bca - dolny œrodkowy obszar zak³adki 1 aktywnej
+	mk_ot3_bra - dolny prawy obszar zak³adki 1 aktywnej
+
+	mk_ot4_tls - górny lewy obszar zak³adki 1
+	mk_ot4_tcs - górny œrodkowy obszar zak³adki 1
+	mk_ot4_trs - górny prawy obszar zak³adki 1
+	mk_ot4_cls - œrodkowy lewy obszar zak³adki 1
+	mk_ot4_ccs - œrodkowy obszar zak³adki 1
+	mk_ot4_crs - œrodkowy prawy obszar zak³adki 1
+	mk_ot4_bls - dolny lewy obszar zak³adki 1
+	mk_ot4_bcs - dolny œrodkowy obszar zak³adki 1
+	mk_ot4_brs - dolny prawy obszar zak³adki 1
+	mk_ot4_tla - górny lewy obszar zak³adki 1 aktywnej
+	mk_ot4_tca - górny œrodkowy obszar zak³adki 1 aktywnej
+	mk_ot4_tra - górny prawy obszar zak³adki 1 aktywnej
+	mk_ot4_cla - œrodkowy lewy obszar zak³adki 1 aktywnej
+	mk_ot4_cca - œrodkowy obszar zak³adki 1 aktywnej
+	mk_ot4_cra - œrodkowy prawy obszar zak³adki 1 aktywnej
+	mk_ot4_bla - dolny lewy obszar zak³adki 1 aktywnej
+	mk_ot4_bca - dolny œrodkowy obszar zak³adki 1 aktywnej
+	mk_ot4_bra - dolny prawy obszar zak³adki 1 aktywnej
+
+	
+	// standarowe nu¿¹ce zadzanie uk³adania zak³adek
+
+*/
+div.mk_pls{
+}
+table.mk_pls /* list songs */ { 
+    margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+	border-spacing: 0px; 
+	border-collapse: collapse;
+}
+tr.mk_pls_row{ 
+}
+td.mk_pls_ftl{ 
+	background-image: url(img/fr_lt_01.gif); 
+	height: 25px;
+	width: 25px;
+}
+td.mk_pls_ftc{ 
+	background-image: url(img/fr_t_01.gif); 
+	background-repeat: repeat-x; 
+	height: 25px; 
+	width: auto; 
+}
+td.mk_pls_ftr{ 
+	background-image: url(img/fr_rt_01.gif); 
+	height: 25px;
+	width: 25px;
+}
+
+td.mk_pls_fcl{ 
+	background-image: url(img/fr_l_01.gif); 
+	height: auto;
+	width: 25px;
+}
+td.mk_pls_fcc{ 
+	background-image: url(img/fr_c_01.gif); 
+	height: auto;
+	width: auto;
+}
+td.mk_pls_fcr{ 
+	background-image: url(img/fr_r_01.gif); 
+	height: auto;
+	width: 25px;
+}
+td.mk_pls_fbl{ 
+	background-image: url(img/fr_lb_01.gif); 
+	height: 25px;
+	width: 25px;
+}
+td.mk_pls_fbc{ 
+	background-image: url(img/fr_b_01.gif); 
+	background-repeat: repeat-x; 
+	height: 25px; 
+	width: auto; 
+}
+td.mk_pls_fbr{ 
+	background-image: url(img/fr_rb_01.gif); 
+	height: 25px;
+	width: 25px;
+}
+a.mk_lst /* song title*/ { 
+	background-image: url(img/ico.gif);
+	background-repeat: no-repeat; 
+	padding-left: 15px;
+	color: #FFF; 
+	text-decoration: underline; 
+}
+a.mk_lsa /* song artist */ { 
+	color: #DDD; 
+	text-decoration: underline; 
+}
+span.mk_lsh /* hypen */ { 
+	background-color: #534c4d; 
+	background-image: url(img/hyp.gif); 
+	background-repeat: no-repeat; 
+	background-position: center; 
+	padding-right: 5px; 
+	padding-left: 5px; 
+}
+
+/* Orders */
+
+div.mk_ord{
+}
+table.mk_ord{ 
+	width: 100%;
+    margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+	border-spacing: 0px; 
+	border-collapse: collapse;
+}
+tr.mk_ord_row{
+}
+td.mk_ord_col{
+}
+div.mk_otb{
+}
+table.mk_otb{ 
+    margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+	border-spacing: 0px; 
+	border-collapse: collapse;
+}
+table.mk_otb /* orders tabs*/{
+	width: auto;
+    margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+	border-spacing: 0px; 
+	border-collapse: collapse;
+}
+tr.mk_otb_row{
+	margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+}
+td.mk_ot0_tcs{ 
+	background-color: #fff;
+	width: 8px;
+	margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+}
+td.mk_ot0_ccs{ 
+	background-color: #fff;
+	width: 8px;
+	margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+}
+td.mk_ot0_bcs{ 
+	background-color: #fff;
+    width: 8px; 
+	margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+}
+
+td.mk_ot1_tls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1_tl.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot1_tcs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1_tc.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot1_trs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1_tr.png); 
+	width: 8px;
+	height: 8px;
+}
+/* center */
+td.mk_ot1_cls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1_cl.png); 
+	width: 8px;
+}
+td.mk_ot1_ccs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-color: #8885bc;
+}
+a.mk_ot1_ccs{ 
+    color: white; 
+    font-weight: bold; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    margin: 0 10px 0 10px; 
+}
+td.mk_ot1_crs{ 
+    margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+    background-image: url(img/t1_cr.png); 
+    width: 8px; 
+}
+td.mk_ot1_bls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1_bl.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot1_bcs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1_bc.png); 
+	height: 4px;
+}
+td.mk_ot1_brs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1_br.png); 
+	width: 8px;
+	height: 4px;
+}
+/* activated */
+td.mk_ot1_tla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1a_tl.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot1_tca{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1a_tc.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot1_tra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1a_tr.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot1_cla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1a_cl.png); 
+	width: 8px;
+}
+td.mk_ot1_cca{ 
+	background-color: #e8c23c;
+	margin: 50 100px 50 100px; 
+}
+a.mk_ot1_cca{ 
+    color: white; 
+    font-weight: bold; font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 0 10px 0 10px; 
+}
+td.mk_ot1_cra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1a_cr.png); 
+	width: 8px;
+}
+td.mk_ot1_bla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1a_bl.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot1_bca{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1a_bc.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot1_bra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t1a_br.png); 
+	width: 8px;
+	height: 4px;
+}
+/* tab 2 */
+
+td.mk_ot2_tls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2_tl.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot2_tcs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2_tc.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot2_trs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2_tr.png); 
+	width: 8px;
+	height: 8px;
+}
+/* center */
+td.mk_ot2_cls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2_cl.png); 
+	width: 8px;
+}
+td.mk_ot2_ccs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-color: #8885bc;
+}
+a.mk_ot2_ccs{ 
+    color: white; 
+    font-weight: bold; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    margin: 0 10px 0 10px; 
+}
+td.mk_ot2_crs{ 
+    margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+    background-image: url(img/t2_cr.png); 
+    width: 8px; 
+}
+td.mk_ot2_bls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2_bl.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot2_bcs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2_bc.png); 
+	height: 4px;
+}
+td.mk_ot2_brs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2_br.png); 
+	width: 8px;
+	height: 4px;
+}
+/* activated */
+td.mk_ot2_tla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2a_tl.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot2_tca{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2a_tc.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot2_tra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2a_tr.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot2_cla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2a_cl.png); 
+	width: 8px;
+}
+td.mk_ot2_cca{ 
+	background-color: #e8c23c;
+	margin: 50 100px 50 100px; 
+}
+a.mk_ot2_cca{ 
+    color: white; 
+    font-weight: bold; font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 0 10px 0 10px; 
+}
+td.mk_ot2_cra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2a_cr.png); 
+	width: 8px;
+}
+td.mk_ot2_bla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2a_bl.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot2_bca{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2a_bc.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot2_bra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t2a_br.png); 
+	width: 8px;
+	height: 4px;
+}
+/* tab 3 */
+
+td.mk_ot3_tls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3_tl.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot3_tcs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3_tc.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot3_trs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3_tr.png); 
+	width: 8px;
+	height: 8px;
+}
+/* center */
+td.mk_ot3_cls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3_cl.png); 
+	width: 8px;
+}
+td.mk_ot3_ccs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-color: #8885bc;
+}
+a.mk_ot3_ccs{ 
+    color: white; 
+    font-weight: bold; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    margin: 0 10px 0 10px; 
+}
+td.mk_ot3_crs{ 
+    margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+    background-image: url(img/t3_cr.png); 
+    width: 8px; 
+}
+td.mk_ot3_bls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3_bl.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot3_bcs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3_bc.png); 
+	height: 4px;
+}
+td.mk_ot3_brs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3_br.png); 
+	width: 8px;
+	height: 4px;
+}
+/* activated */
+td.mk_ot3_tla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3a_tl.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot3_tca{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3a_tc.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot3_tra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3a_tr.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot3_cla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3a_cl.png); 
+	width: 8px;
+}
+td.mk_ot3_cca{ 
+	background-color: #e8c23c;
+	margin: 50 100px 50 100px; 
+}
+a.mk_ot3_cca{ 
+    color: white; 
+    font-weight: bold; font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 0 10px 0 10px; 
+}
+td.mk_ot3_cra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3a_cr.png); 
+	width: 8px;
+}
+td.mk_ot3_bla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3a_bl.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot3_bca{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3a_bc.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot3_bra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t3a_br.png); 
+	width: 8px;
+	height: 4px;
+}
+/* tab 4 */
+
+td.mk_ot4_tls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4_tl.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot4_tcs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4_tc.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot4_trs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4_tr.png); 
+	width: 8px;
+	height: 8px;
+}
+/* center */
+td.mk_ot4_cls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4_cl.png); 
+	width: 8px;
+}
+td.mk_ot4_ccs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-color: #8885bc;
+}
+a.mk_ot4_ccs{ 
+    color: white; 
+    font-weight: bold; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    margin: 0 10px 0 10px; 
+}
+td.mk_ot4_crs{ 
+    margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+    background-image: url(img/t4_cr.png); 
+    width: 8px; 
+}
+td.mk_ot4_bls{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4_bl.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot4_bcs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4_bc.png); 
+	height: 4px;
+}
+td.mk_ot4_brs{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4_br.png); 
+	width: 8px;
+	height: 4px;
+}
+/* activated */
+td.mk_ot4_tla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4a_tl.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot4_tca{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4a_tc.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot4_tra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4a_tr.png); 
+	width: 8px;
+	height: 8px;
+}
+td.mk_ot4_cla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4a_cl.png); 
+	width: 8px;
+}
+td.mk_ot4_cca{ 
+	background-color: #e8c23c;
+	margin: 50 100px 50 100px; 
+}
+a.mk_ot4_cca{ 
+    color: white; 
+    font-weight: bold; font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 0 10px 0 10px; 
+}
+td.mk_ot4_cra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4a_cr.png); 
+	width: 8px;
+}
+td.mk_ot4_bla{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4a_bl.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot4_bca{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4a_bc.png); 
+	width: 8px;
+	height: 4px;
+}
+td.mk_ot4_bra{ 
+	margin: 0px; padding: 0px; border-width: 0px; outline-width: 0px; 
+	background-image: url(img/t4a_br.png); 
+	width: 8px;
+	height: 4px;
+}
+
+/* frame order */
+tr.mk_fo /* frame */{ 
+}
+
+td.mk_fotl /* frame top left*/{ 
+	background-image: url(img/fr_lt_01.gif); 
+	height: 25px;
+	width: 25px;
+}
+td.mk_fotc /* frame top */{ 
+	background-image: url(img/fr_t_01.gif); 
+	background-repeat: repeat-x; 
+	height: 25px; 
+	width: auto; 
+}
+td.mk_fotr /* frame right top*/ { 
+	background-image: url(img/fr_rt_01.gif); 
+	height: 25px;
+	width: 25px;
+}
+
+td.mk_focl /* frame left */ { 
+	background-image: url(img/fr_l_01.gif); 
+	height: auto;
+	width: 25px;
+}
+td.mk_focc /* frame center */ { 
+	background-image: url(img/fr_c_01.gif); 
+	height: auto;
+	width: auto;
+}
+td.mk_focr /* frame right */ { 
+	background-image: url(img/fr_r_01.gif); 
+	height: auto;
+	width: 25px;
+}
+td.mk_fobl /* frame left bottom*/{ 
+	background-image: url(img/fr_lb_01.gif); 
+	height: 25px;
+	width: 25px;
+}
+td.mk_fobc /* frame bottom */{ 
+	background-image: url(img/fr_b_01.gif); 
+	background-repeat: repeat-x; 
+	height: 25px; 
+	width: auto; 
+}
+td.mk_fobr /* frame right bottom*/ { 
+	background-image: url(img/fr_rb_01.gif); 
+	height: 25px;
+	width: 25px;
+}
+/* Order phone preview and info */
+table.mk_o{
+    margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+	border-spacing: 0px; 
+	border-collapse: collapse;
+}
+tr.mk_o /* frame */{ 
+}
+
+td.mk_op /* order phone preview */ { 
+    background-image: url(img/phone-sms.png); 
+    background-repeat: no-repeat; 
+    width: 110px; 
+    height: 47px; 
+    vertical-align: top;
+    padding-top: 95px; 
+    padding-left: 40px; 
+    color: black; 
+    font-size: 11px; 
+    font-weight: bold; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+}
+td.mk_oi /* order instruction */ { 
+    width: auto; 
+    height: auto; 
+    padding-left: 10px; 
+    color: black; 
+    font-size: 11px; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+}
+div.oa /* operator available*/{
+	background-color: #123;
+	color: #aaa;
+}
+div.pr /* payment*/{
+	background-color: #345;
+	color: #ccc;
+}
+div.ph /* phones*/{
+	background-color: #567;
+	color: #888;
+}
+div.h /* help*/{
+	background-color: #864;
+	color: #aaa;
+}
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>mobile KARAOKE - mobiKAR</title>
+    
+    <link rel="stylesheet" type="text/css" title="CSS" href="mobikar.css"></head>
+
+  <body>
+    <div class="mk_ord">
+      <table class="mk_ord">
+        <tbody><tr class="mk_ord_row">
+          <td class="mk_ord_col">
+            <div class="mk_otb">
+              <table class="mk_otb">
+                <tbody><tr class="mk_otb_row">
+                  <td class="mk_ot0_tcs"></td>
+                  <td class="mk_ot1_tla"></td>
+                  <td class="mk_ot1_tca"></td>
+                  <td class="mk_ot1_tra"></td>
+                </tr>
+                <tr>
+                  <td class="mk_ot0_ccs"></td>
+                  <td class="mk_ot1_cla"></td>
+                  <td class="mk_ot1_cca">SMS</td>
+                  <td class="mk_ot1_cra"></td>
+                </tr>
+      </tbody></table>
+    </div>
+  </td></tr></tbody></table></div></body></html>

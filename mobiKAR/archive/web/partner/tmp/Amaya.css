@@ -1,0 +1,19 @@
+div.a{
+  background-image: url(img.png); 
+  background-repeat: repeat;
+}
+table.c{
+  background-image: url(img.png);  background-repeat: repeat;
+}
+tr.qw{
+  background-image: url(img.png);  background-repeat: repeat;
+}
+td{
+  width: 150px;
+  background-image: url(img.png);  background-repeat: repeat;
+
+}
+td.b{
+  width: auto;
+  background-image: url(http://komkom.pl/css/img/std/bkg.png);
+}

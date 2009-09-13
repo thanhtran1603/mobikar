@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>Partner</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="robots" content="index,follow" />
+		<link rel="stylesheet" type="text/css" href="style3.css" title="main" />
+	</head>
+	
+	<body>
+		<table>
+			<tr>
+    			<td>
+					<table class="tab">
+						<tr>
+							<td class="mk_t0_t"></td>
+							<td class="mk_t1a_tl"></td>
+							<td class="mk_t1a_tc"></td>
+							<td class="mk_t1a_tr"></td>
+							<td class="mk_t2_tl"></td>
+							<td class="mk_t2_tc"></td>
+							<td class="mk_t2_tr"></td>
+							<td class="mk_t3_tl"></td>
+							<td class="mk_t3_tc"></td>
+							<td class="mk_t3_tr"></td>
+							<td class="mk_t4_tl"></td>
+							<td class="mk_t4_tc"></td>
+							<td class="mk_t4_tr"></td>
+						</tr>
+						<tr>
+							<td class="mk_t0_c"></td>
+							<td class="mk_t1a_cl"></td>
+							<td class="mk_t1a_cc"><a class="mk_t1a" href="#">SMS</a></td>
+							<td class="mk_t1a_cr"></td>
+							<td class="mk_t2_cl"></td>
+							<td class="mk_t2_cc"><a class="mk_t2" href="untitled3_2.html">Taniej</a></td>
+							<td class="mk_t2_cr"></td>
+							<td class="mk_t3_cl"></td>
+							<td class="mk_t3_cc"><a class="mk_t2" href="#">Telefony</a></td>
+							<td class="mk_t3_cr"></td>
+							<td class="mk_t4_cl"></td>
+							<td class="mk_t4_cc"><a class="mk_t4" href="#">Pomoc</a></td>
+							<td class="mk_t4_cr"></td>
+						</tr>
+						<tr>
+							<td class="mk_t0_b"></td>
+							<td class="mk_t1a_bl"></td>
+							<td class="mk_t1a_bc"></td>
+							<td class="mk_t1a_br"></td>
+							<td class="mk_t2_bl"></td>
+							<td class="mk_t2_bc"></td>
+							<td class="mk_t2_br"></td>
+							<td class="mk_t3_bl"></td>
+							<td class="mk_t3_bc"></td>
+							<td class="mk_t3_br"></td>
+							<td class="mk_t4_bl"></td>
+							<td class="mk_t4_bc"></td>
+							<td class="mk_t4_br"></td>
+						</tr>
+						<tr>
+							<td class="mk_tb1" colspan="13"></td>
+						</tr>
+					</table>
+	    		</td>
+	    		<td>
+	    			<table style="width: 100%">
+	    				<tr>
+	    					<td>ala</td>
+	    				</tr>
+	    			</table
+	    		</td>
+			</tr>
+			<tr>
+    			<td>
+				<table>
+					<tr>
+						<td class="mk_ftl"></td>
+						<td class="mk_ftc"></td>
+						<td class="mk_ftr"></td>
+					</tr>
+					<tr>
+						<td class="mk_fcl"></td>
+						<td class="mk_fcc">
+							<table>
+								<tr>
+									<td class="mk_pp">
+										DO:7568
+										<br />
+										AP.MK.A
+										<br />
+										&#160;
+										<br />
+										&#160;
+									</td>
+									<td class="mk_oi">
+										Aby pobrać aplikację mobiKAR na telefon
+										<br/>
+										Wyślij wiadomość SMS o treści 
+										<br/>
+										AP.MK.A
+										<br/>
+										na numer
+										<br/>
+										7568
+										<br/>
+										Koszt 7,32 zł.
+									</td>
+								</tr>
+							</table>
+							
+							<div class="oa">
+								Płatność poprzez wiadomości SMS Premium Rate jest dostępna poprzez polskich operatorów sieci komórkowych
+							</div>
+							<div class="pr">
+								Jeśli chcesz zapłacić 3,99 zł za aplikację zajrzyj pod zakładkę <a href="untitled3_2.html">Taniej</a>
+							</div>
+							<div class="ph">
+								Aplikacja mobiKAR dostępna jest na telefony wyposarzone w środowisko JAVA<sup>TM</sup>ze wsparciem dla multimediów. Zajrzyj pod zakładkę telefony by przejrzeć całą listę telefonów.
+							</div>
+							<div class="h">
+								Dokładne omówienie procedury pobierania szukaj pod zakładką <a href="untitled3_2.html">Pomoc</a>
+							</div>
+								
+						</td>
+						<td class="mk_fcr"></td>
+					</tr>
+					<tr>
+						<td class="mk_fbl"></td>
+						<td class="mk_fbc"></td>
+						<td class="mk_fbr"></td>
+					</tr>
+				</table>
+   </td>
+			</tr>
+		</table>
+		<p>&#160;</p>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+table{ margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+	border-spacing: 0px; 
+	border-collapse: collapse;
+}
+td{
+	margin: 0px; 
+	padding: 0px; 
+	border-width: 0px; 
+	outline-width: 0px; 
+}
+td.flt /* frame left top*/{ 
+	background-image: url(img/fr_lt_01.gif); 
+	height: 25px;
+	width: 25px;
+}
+td.ft /* frame top */{ 
+	background-image: url(img/fr_t_01.gif); 
+	background-repeat: repeat-x; 
+	height: 25px; 
+	width: 150px; 
+}
+td.frt /* frame right top*/ { 
+	background-image: url(img/fr_rt_01.gif); 
+	height: 25px;
+	width: 25px;
+}
+
+td.fl /* frame left */ { 
+	background-image: url(img/fr_l_01.gif); 
+	height: auto;
+	width: 25px;
+}
+td.fc /* frame center */ { 
+	background-image: url(img/fr_c_01.gif); 
+	height: auto;
+	width: auto;
+}
+td.fr /* frame right */ { 
+	background-image: url(img/fr_r_01.gif); 
+	height: auto;
+	width: 25px;
+}
+
+
+
+
+td.flb /* frame left bottom*/{ 
+	background-image: url(img/fr_lb_01.gif); 
+	height: 25px;
+	width: 25px;
+}
+td.fb /* frame bottom */{ 
+	background-image: url(img/fr_b_01.gif); 
+	background-repeat: repeat-x; 
+	height: 25px; 
+	width: 150px; 
+}
+td.frb /* frame right bottom*/ { 
+	background-image: url(img/fr_rb_01.gif); 
+	height: 25px;
+	width: 25px;
+}
+a.mk_st /* song title*/ { 
+	background-image: url(img/ico.gif);
+	background-repeat: no-repeat; 
+	padding-left: 15px;
+	color: #FFF; 
+	text-decoration: underline; 
+}
+a.mk_sa /* song artist */ { 
+	color: #DDD; 
+	text-decoration: underline; 
+}
+
+span.mk_sh /* hypen */ { background-color: #534c4d; background-image: url(img/hyp.gif); background-repeat: no-repeat; background-position: center; padding-right: 10px; padding-left: 10px; }
+
+p.paragraf{color: red;}
+

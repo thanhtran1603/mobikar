@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<card id='card' title='mobiKAR.net'>
+<p align='center'>
+			mobiKAR - mobilne KARAOKE
+		</p>
+		<p>
+			czyli KARAKOE na Twój telefon!
+			<br/>
+			Dziś przypada rocznica urodzin Jana Pawła II.
+			<br/>Chcąc uczcić ten dzień, udostępniamy dziś do pobrania za darmo aplikację mobiKAR z pieśnią religijną BARKA. Wiemy iż tą pieśń szczególnie lubiał nasz papież 
+			<br/>
+			<a href="/get/mobiKAR_MMAPI_01.jad">
+				Pobież mobiKARa
+			</a>
+			
+			<br/>
+		</p>
+	</card>
+</wml>
