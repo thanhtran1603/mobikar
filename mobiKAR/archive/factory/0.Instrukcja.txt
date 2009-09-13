@@ -1,0 +1,11 @@
+- Wgranie oryginalnej piosenki pod nazw¹ song_org.mid
+- odpalenie 0.midi1.bat - obejœcie zabezpieceñ wynik SONG_1.mid
+- PSMPlay - przyciêcie piosenki - wynik song_cut.mid
+- jeœli skrajne dŸwiêki nachodz¹ siê z obciêtym materia³em to wyg³adziæ to Jazzem
+- w GNMIDI wyrównujemy do 96ppq, 96bpm i format 1 - wynik SONG_96.mid
+- wy³uskanie tekstu za pomoc¹ 1.Kar2Txt.bat - wynik text_org.txt
+- poprawienie tekstu - wynik text_mod.txt
+- konwersja do mLYR za pomoc¹ 2.Txt2mLYR.bat - wynik 0.mlyr
+- PSMPlay - konwersja do MMF-a wynik SONG.mmf
+- PSMPlay - konwersja do MMF-a do MIDI wynik SONG_MMF.mid
+- w GNMIDI wyrównujemy do 96ppq, 96bpm i format 1 - wynik 0.midi

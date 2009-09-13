@@ -1,0 +1,1 @@
+java -cp ./ Kar2Txt -q SONG_96.mid text_org.txt
