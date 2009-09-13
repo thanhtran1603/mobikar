@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AppContent version="2.0">
+<Configuration value="CLDC-1.0"/>
+<Profile value="MIDP-2.0"/>
+<FileSystem systemName="treefs[d:/projects/java/me/mobikar:src/">
+<File name="/"/>
+</FileSystem>
+<FileSystem systemName="treefs[d:/projects/java/me/mobikar:res/">
+<File name="/"/>
+</FileSystem>
+<Filter common="Default" removeCvs="true"
+/>
+<Jar compressLevel="6" compress="true"/>
+<Descriptor descriptorType="jad"/>
+<Signing level="0" position="0"
+/>
+<Obfuscator obfuscated="true"/>
+<attribute order="1" jad="true" manifest="true">
+<required name="MicroEdition-Profile" value="MIDP-2.0" >
+<tooltip readonly="true"><![CDATA[J2ME device profile and version.]]></tooltip>
+</required></attribute>
+<attribute order="2" jad="true" manifest="true">
+<required name="MicroEdition-Configuration" value="CLDC-1.0" >
+<tooltip readonly="true"><![CDATA[J2ME device configuration and version.]]></tooltip>
+</required></attribute>
+<attribute order="3" jad="true" manifest="true">
+<required name="MIDlet-Version" value="00.02.02" >
+<tooltip readonly="true"><![CDATA[Version number of the MIDlet suite.]]></tooltip>
+</required></attribute>
+<attribute order="4" jad="true" manifest="true">
+<required name="MIDlet-Name" value="mobiKAR" >
+<tooltip readonly="true"><![CDATA[Name]]></tooltip>
+</required></attribute>
+<attribute order="5" jad="true" manifest="true">
+<required name="MIDlet-Vendor" value="MiKO" >
+<tooltip readonly="true"><![CDATA[The organization that provides the MIDlet suite.]]></tooltip>
+</required></attribute>
+<attribute order="6" jad="true" manifest="false">
+<required name="MIDlet-Jar-URL" value="mobiKAR.jar" >
+<tooltip readonly="false"><![CDATA[The URL from which the JAR file is loaded.]]></tooltip>
+</required></attribute>
+<attribute order="7" jad="true" manifest="false">
+<required name="MIDlet-Jar-Size" value="45654" >
+<tooltip readonly="false"><![CDATA[The size of the JAR in bytes.]]></tooltip>
+</required></attribute>
+<attribute order="8" jad="true" manifest="true">
+<optional name="MIDlet-Info-URL" value="" >
+<disabled/>
+<tooltip readonly="false"><![CDATA[A URL for information further describing the MIDlet suite.]]></tooltip>
+</optional>
+</attribute>
+<attribute order="9" jad="true" manifest="true">
+<optional name="MIDlet-Icon" value="" >
+<tooltip readonly="false"><![CDATA[Name of a PNG file used to represent the suite.]]></tooltip>
+</optional>
+</attribute>
+<attribute order="10" jad="true" manifest="true">
+<optional name="MIDlet-Description" value="" >
+<disabled/>
+<tooltip readonly="false"><![CDATA[The description of the MIDlet suite.]]></tooltip>
+</optional>
+</attribute>
+<attribute order="11" jad="true" manifest="true">
+<optional name="MIDlet-Delete-Confirm" value="" >
+<disabled/>
+<tooltip readonly="false"><![CDATA[Text to be shown on the device when the suite is deleted.]]></tooltip>
+</optional>
+</attribute>
+<attribute order="12" jad="true" manifest="true">
+<optional name="MIDlet-Install-Notify" value="" >
+<disabled/>
+<tooltip readonly="false"><![CDATA[URL to be notified when suite is installed on a device.]]></tooltip>
+</optional>
+</attribute>
+<attribute order="13" jad="true" manifest="true">
+<optional name="MIDlet-Delete-Notify" value="" >
+<tooltip readonly="false"><![CDATA[URL to be notified when suite is deleted from a device.]]></tooltip>
+</optional>
+</attribute>
+<attribute order="14" jad="true" manifest="true">
+<optional name="MIDlet-Data-Size" value="" >
+<disabled/>
+<tooltip readonly="false"><![CDATA[The minimum number of bytes of persistent data required by the MIDlet.]]></tooltip>
+</optional>
+</attribute>
+<attribute order="15" jad="true" manifest="true">
+<permission name="">
+</permission>
+</attribute>
+<attribute order="16" jad="true" manifest="true">
+<permission-opt name="">
+</permission-opt>
+</attribute>
+<attribute order="17" jad="true" manifest="true">
+<midlet name="mobiKAR" class="MainMIDlet" icon="i.png" order="1">
+</midlet>
+</attribute>
+</AppContent>

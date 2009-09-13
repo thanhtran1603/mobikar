@@ -1,0 +1,40 @@
+G-Tech MIDI MPU Format
+=-=-=-=-=-=-=-=-=-=-=-
+
+This format is used by Richy2000 in his MIDI Lib MPU. 
+It Plays MIDI using the MPU-401 interface, and maybe MPU-404 
+inteface too someday. The file format will be similar to that of a MOD.
+
+Header:
+
+ID:        4 Bytes  -  "GmID"   - Identifys that its a G-Tech MIDI MPU
+Type:      Word                 - What Type of GMD, used to add extras
+Tracks:    Word                 - To you MOD Music Makers, Patterns
+Tempo:     1 Byte               - Speed in Hz
+Sequence:  256 Bytes            - Order to play Tracks/Patterns, max = 128
+
+Now starts the Tracks, 64 Notes in length, with 16 Channels on each Row.
+
+Track Header:
+ID:        4 Bytes   - "TmID"   - Tells you that this is the start of a track
+Commands:  48 Bytes             - 2 Bytes for each note, explained later. Repeated
+                                  64 times each track.
+
+The Commands for each track in the command chunk are very simple:
+
+Byte 1 - The Command Itself
+Byte 2 - The Data
+Byte 3 - The Channel Instrument. If 255 it isn't effective.
+Byte.........
+
+You get the idea. There are 48 Bytes, for all 16 Channels. Now for the commands:
+
+Hex	Purpose
+====================
+0A	Skip Track
+0B	Note On
+0C	Note Off
+0D	Pitch Bend (V2)
+0E	Reserved (V2?)
+0F	Change Instrument
+1x	Play Note with Specific Volume (x)

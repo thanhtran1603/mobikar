@@ -1,0 +1,9 @@
+MicroEdition-Configuration: CLDC-1.0
+MicroEdition-Profile: MIDP-1.0
+MIDlet-Name: mobiKAR
+MIDlet-Vendor: MiKO
+MIDlet-Version: 00.02.15
+MIDlet-Icon: /i.png
+MIDlet-1:  mobiKAR, /i.png, MainMIDlet
+MIDlet-Jar-URL: mobiKAR_midp10_mmapi.jar
+MIDlet-Jar-Size: 64969

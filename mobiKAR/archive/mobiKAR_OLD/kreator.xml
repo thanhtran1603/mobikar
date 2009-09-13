@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="exec" name="KREATOR">
+  <property name="prj-name" value="mobiKAR" />
+  <property name="version_name" value="000203" />
+  <property name="debug" value="on" description="wartosci to on lub off" />
+  <target depends="init-mmapi10,init,make,exec" name="START MMAPI MIDP 1.0" />
+  <target depends="init-mmapi20,init,make,exec" name="START MMAPI MIDP 2.0" />
+  <target depends="init-sie,init,make,exec" name="START SIEMENS" />
+
+  <target name="init-mmapi10">
+    <property name="midi" value="mmapi" description="mmapi lub sie ..." />
+    <property name="midp" value="10" description="10 lub 20" />
+    <property name="libs" value="D:/dev/WTK22/lib/cldcapi10.jar;D:/dev/WTK22/lib/midpapi10.jar;D:/dev/WTK22/lib/mmapi.jar" />
+    <property name="preverify_exe" value="D:/dev/WTK22/bin/preverify1.0.exe" />
+  </target>
+  <target name="init-mmapi20">
+    <property name="midi" value="mmapi" description="mmapi lub sie ..." />
+    <property name="midp" value="20" description="10 lub 20" />
+    <property name="lib_midp" value="D:/dev/WTK21/lib/all.zip;D:/dev/WTK22/lib/cldcapi10.jar;D:/dev/WTK22/lib/midpapi20.jar" />
+    <property name="lib_midi" value="D:/dev/WTK22/lib/mmapi.jar" />
+    <property name="preverify_exe" value="D:/dev/WTK22/bin/preverify" />
+  </target>
+  <target name="init-sie">
+    <property name="midi" value="sie" description="mmapi lub sie ..." />
+    <property name="midp" value="10" description="10 lub 20" />
+    <property name="lib_midp" value="D:/dev/siemens/SMTK/lib/api.jar" />
+    <property name="lib_midi" value="D:/dev/siemens/SMTK/emulators/S55/lib/api.jar" />
+    <property name="preverify_exe" value="D:/dev/siemens/SMTK/bin/preverify.exe" />
+  </target>
+
+  <target name="init">
+    <tstamp />
+    <property name="prj" value="${prj-name}_midp${midp}_${midi}" />
+    <property name="proguard_jar" value="D:/dev/JavaCodeManipulator/proguard3.0.7/lib/proguard.jar" />
+    <property name="JADCreator_path" value="../../JADCreator/" />
+    <property name="build" value="build" />
+    <property name="backup" value="backup" />
+  </target>
+
+  <target depends="init" name="make">
+    <delete includeEmptyDirs="true" quiet="true">
+      <fileset dir="${build}" />
+    </delete>
+
+    <mkdir dir="${build}/classes" />
+
+<!-- S R C -->
+    <mkdir dir="${build}/src" />
+
+    <copy overwrite="true" todir="${build}/src">
+      <fileset dir="src" />
+    </copy>
+
+    <copy overwrite="true" todir="${build}/src">
+      <fileset dir="native/midp/${midp}/src" />
+    </copy>
+
+    <copy overwrite="true" todir="${build}/src">
+      <fileset dir="native/midi/${midi}/src" />
+    </copy>
+
+<!-- R E S -->
+    <mkdir dir="${build}/res" />
+
+    <copy overwrite="true" todir="${build}/res">
+      <fileset dir="res" />
+    </copy>
+
+    <copy overwrite="true" todir="${build}/res">
+      <fileset dir="native/midp/${midp}/res" />
+    </copy>
+
+    <copy overwrite="true" todir="${build}/res">
+      <fileset dir="native/midi/${midi}/res" />
+    </copy>
+
+    <condition property="condition-debug">
+      <equals arg1="${debug}" arg2="on" />
+    </condition>
+
+    <antcall target="make-debug" />
+
+    <antcall target="make-release" />
+  </target>
+
+  <target if="condition-debug" name="make-debug">
+    <javac bootclasspath="${libs}" debug="on" destdir="${build}/classes" optimize="off" source="1.3"
+    srcdir="${build}/src" target="1.1" />
+
+    <jar basedir="${build}/classes" jarfile="${build}/${prj}.o.jar" manifest="MANIFEST.MF" />
+
+    <mkdir dir="${build}/output" />
+
+    <unjar dest="${build}/output" src="${build}/${prj}.o.jar" />
+  </target>
+
+  <target name="make-release" unless="condition-debug">
+    <javac bootclasspath="${libs}" debug="off" destdir="${build}/classes" optimize="on" source="1.3"
+    srcdir="${build}/src" target="1.1" />
+    <jar basedir="${build}/classes" jarfile="${build}/${prj}.jar" manifest="MANIFEST.MF" />
+    <java fork="yes" jar="${proguard_jar}">
+      <arg value="-libraryjars ${libs}" />
+      <arg value="-injars ${build}/${prj}.jar" />
+      <arg value="-outjar ${build}/${prj}.o1.jar" />
+      <arg value="-dontusemixedcaseclassnames" />
+      <arg value="-defaultpackage ''" />
+      <arg value="-keep public class * extends javax.microedition.midlet.MIDlet" />
+      <arg value="-keep class aa" />
+    </java>
+
+    <mkdir dir="${build}/output1" />
+    <unjar dest="${build}/output1" src="${build}/${prj}.o1.jar" />
+    
+    <echo>A teraz drugie przejscie</echo>
+
+    <java fork="yes" jar="${proguard_jar}">
+      <arg value="-libraryjars ${libs}" />
+      <arg value="-injars ${build}/${prj}.o1.jar" />
+      <arg value="-outjar ${build}/${prj}.o.jar" />
+      <arg value="-dontusemixedcaseclassnames" />
+      <arg value="-defaultpackage ''" />
+      <arg value="-keep public class * extends javax.microedition.midlet.MIDlet" />
+      <arg value="-keep class aa" />
+    </java>
+
+    <mkdir dir="${build}/output" />
+    <unjar dest="${build}/output" src="${build}/${prj}.o.jar" />
+  </target>
+
+  <target name="preverify">
+    <mkdir dir="${build}/preverified" />
+
+    <exec executable="${preverify_exe}">
+      <arg line="-classpath ${libs}" />
+      <arg line="-d ${build}/preverified" />
+      <arg line="${build}/output" />
+    </exec>
+  </target>
+
+  <target depends="preverify" name="jar">
+    <jar basedir="${build}/preverified" compress="true" jarfile="${prj}.jar" manifest="MANIFEST.MF">
+      <fileset dir="${build}/res" />
+    </jar>
+  </target>
+
+  <target depends="jar" name="JADCreator">
+    <java classname="JADCreator" classpath="${JADCreator_path}">
+      <arg line="'${basedir}' '${prj}'" />
+    </java>
+  </target>
+
+  <target depends="JADCreator" name="backup">
+    <mkdir dir="${build}/bak" />
+    <copy overwrite="true" todir="${build}/bak">
+      <fileset dir="${build}/src" />
+      <fileset dir="${build}/res" />
+    </copy>
+    <jar basedir="${build}/bak" jarfile="${backup}/${prj}_${version_name}.bak.jar" manifest="MANIFEST.MF" />
+  </target>
+
+  <target depends="backup" name="exec">
+  </target>
+</project>
+

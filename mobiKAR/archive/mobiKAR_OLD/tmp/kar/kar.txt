@@ -1,0 +1,13 @@
+KAR files are based on standard Midi files with the following additional events:
+
+The KAR text meta events start with an @ followed by a character indicating the type of KAR text meta event, then followed by text for that event.  The following text meta events occur embedded in regular MIDI text events:
+
+FileType:     @KMIDI KARAOKE FILE
+Version:      @V0100
+Information:  @I<text>
+Language:     @LENGL
+Title 1:      @T<title>
+Title 2:      @T<author>
+Title 3:      @T<copyright>
+
+The following lyric text indicators are defined.  A \ (backslash) in the text is to clear the screen. A / (forwardslash) in the text is a line feed (next line).

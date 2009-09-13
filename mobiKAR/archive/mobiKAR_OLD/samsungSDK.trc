@@ -1,0 +1,16 @@
+PARSE MSG FROM GUI 1 24 1 43 
+PARSE MSG FROM GUI 2 D:\dev\Samsung\SJSDKv2.0\skins\SGH-X100.ski 
+PARSE MSG FROM GUI 1 26 0 0 
+PARSE MSG FROM GUI 2  
+PARSE MSG FROM GUI 1 4 255 35 
+PARSE MSG FROM GUI 2 D:\projects\java\ME\tmp\KeyCode.jad 
+PARSE MSG FROM GUI 1 4 255 47 
+PARSE MSG FROM GUI 2 D:\projects\java\ME\tmp\KeyCodeOnFullScreen.jad 
+PARSE MSG FROM GUI 1 4 255 35 
+PARSE MSG FROM GUI 2 D:\projects\java\ME\tmp\KeyCode.jad 
+PARSE MSG FROM GUI 1 4 255 56 
+PARSE MSG FROM GUI 2 D:\projects\java\ME\KomKom\kom_std_sam_c100_pol_full.jad 
+PARSE MSG FROM GUI 1 2 1 34 
+PARSE MSG FROM GUI 2 D:\projects\java\ME\KomKom\a\flash 
+PARSE MSG FROM GUI 1 1 208 0 
+PARSE MSG FROM GUI 2  
