@@ -1,0 +1,5 @@
+MIDlet-Vendor: MiKO
+MIDlet-Version: 1.0
+MIDlet-Name: mlibPlayer
+MicroEdition-Configuration: CLDC-1.0
+MicroEdition-Profile: MIDP-1.0
