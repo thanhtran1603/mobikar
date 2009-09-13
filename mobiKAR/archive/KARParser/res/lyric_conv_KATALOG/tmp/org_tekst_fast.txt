@@ -1,0 +1,6 @@
+//d³ugoœæ	03:05.490
+MILLIS	185490
+AUTHOR	<empty>
+TITLE	<empty>
+CREATOR	<empty>
+VERSION	<empty>

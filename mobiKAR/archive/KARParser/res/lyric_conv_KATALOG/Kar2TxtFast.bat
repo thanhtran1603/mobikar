@@ -1,0 +1,1 @@
+java -cp ./ lyricconv.Kar2Txt -q tmp\org_2.mid tmp\org_tekst_fast.txt

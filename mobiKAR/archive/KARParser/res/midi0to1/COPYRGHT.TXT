@@ -1,0 +1,136 @@
+	Copyright rules for GN utilities and sources
+
+1. General
+===========
+  C copyright of all GN utilities, modules, program sources 
+    is kept by Guenter Nagler, all rights reserved
+  * the author does not guarantee that the programs are free of errors and
+    is not responsible for damages that are caused by using the programs,
+    user should not use them if (s)he isn't aware about this.
+    See also disclaimer in .doc file of each software package.
+  * don't use any GN utility for illegal purpose.
+  * it is not allowed to debug GN software (cracking, hacking, 
+    reverse engineering)
+
+2. Rules using free GN utilities
+================================
+  * These utilities are free for private and educational non-commercial use
+    only
+  * It is not allowed to sell the programs or bundle them with commercial 
+    or shareware products or shareware/freeware cdrom (see distribution rules)
+  * It is not allowed to distribute modified programs or single files from  
+    a compressed package
+  * For commercial use or use in shareware products need permission 
+    (see distribution rules)
+  * Calling software utilities from selfmade software requires permission 
+    if the selfmade software is distributed.
+  * Send new ideas, bug reports directly to author by email. The
+    author decides self which ideas are implemented or what is a bug
+    and a feature.
+
+2. Rules for Shareware GN utilities
+===================================
+  * Shareware utilities are not free, if you want to use the utility then
+    must register the shareware product and pay the current registration 
+    price. 
+  * Shareware demo .zip are free for testing the software for limited time.
+    GNMIDI, GNMIDFMT, GNKnow trial use are limited to 5 days,
+    GNIStyle trial version is not time limited.
+  * It is not allowed to use the trial versions as full versions by 
+    knocking them up (cracking), this would be stealing.
+  * It is not allowed to use (stolen) registration keys from others or 
+    create own registration keys (hacking), such illegal keys are 
+    not valid, this would be stealing.
+  * After you tried the demo version with all its limits you decide if 
+    you want register this shareware. 
+  * If you want register then read readme.txt/liesmich.txt and 
+    choose one of the payment methods. For direct payments to author
+    you need to fill a registration form and send it with the payment to the
+    author. For payments through a credit card registration service like 
+    RegSoft.com, you need to fill the order form of the company correctly.
+    Currently only RegSoft.com is legitimized to sell GN Shareware licenses.
+  * For registering we need your full international postal address and 
+    real name, optional email address. Without them no working license file 
+    can be created.
+  * If you don't want to register then you must delete all installations 
+    of the shareware. You can try a future upgrade to check if you like 
+    this one more.
+  * Price can change so download newest demo to get current registration 
+    conditions or ask the author by email.
+  * The original (unmodified) demo .zip can be distributed by any media.
+  * It is not allowed to distribute a registration license.
+  * It is not allowed to modify the demo .zip file, nor to include or remove
+    files.
+  * Support will only be given to registered users by email.
+  * license keys could change at new versions, legally registered users can 
+    get a new key from author, keep old key in case that want use an old
+    version again.
+  * Bug reports and questions can be asked directly to author by email.
+  * if a registered user violate against license conditions 
+    (e.g. distribute key) then copyright laws of Austria apply to 
+    judge the copyright violation. The users registration license will
+    stop automatically, this user is then not allowed to use shareware key 
+    and upgrades.
+  * GNMIDI legally registered users can use GNMIDFMT too.
+  * Legally registered users have permission to use the resulting MIDI files
+    of the free DOS utilities for commercial use.
+  * GNMIDI legally registered users have permission to use the resulting MIDI
+    files for commercial use.
+  * User is responsible to care about the copyright rules of existing MIDI 
+    files (e.g. musical notes, lyrics, professional made MIDI songs),
+    modifying an existing MIDI song with GN shareware software does not 
+    change the copyright rules of the MIDI song. Even if modifying copyright 
+    info in a MIDI file with GN software the MIDI file remains copyright of
+    the original owners (author, composer, sequencer, company ...).
+    Author is not responsible for users violating MIDI or songs copyright laws.
+
+3.  Rules for use of C++ program sources
+========================================
+  * Source codes to most free DOS GN utilities can be licensed, also midiio source 
+    library for reading/writing/copying/modifying/analysing MIDI files.
+  * midiio source codes are required to compile most MIDI utilities.
+  * It is not allowed to redistribute or resell the sources.
+  * Sources are not available for any Open Source projects.
+  * For any distribution of software or for any commercial or shareware use 
+    of software  that uses GN modules you need to ask for permission (see 
+    distribution rules). 
+
+4. Distribution Rules 
+============================
+  * Distribution of Shareware demo .zip is allowed, it is not allowed to
+    get paid for distribition. Distribution of Shareware registration 
+    keys is prohibited.
+  * Free for private noncommercial use utilities can be distributed, only
+    .zip files that are not modified. It is not allowed to get paid for 
+    distribution or bundle it with any commercial or shareware or freeware 
+    product (e.g. software, cdrom, book, magazine...), you need permission
+    for bundle any software.
+  * To use any of the free or shareware GN midi utilities to generate 
+    commercial midi files (e.g. produce and sell midi files, midi files 
+    for use by a company - advertisement or presentation or company 
+    homepage) GNMIDI Shareware must be registered.
+  * For using utilities or sources in projects that are distributed 
+    you need permission from author. Tell your project plans and which 
+    GN utilities or sources are wanted to be used in project.
+  * Author can give or deny permission to use utilities or sources in a 
+    project, or limit permission for certain use inside a project. 
+    Especially if project is competition against any GN utility or plan
+    permission might be denied or limitted.
+  * If you find utilities or sources to be useful in combination with your 
+    project (that you want to distribute) then ask for permission and 
+    conditions for including certain GN material into project,
+    before starting with the project, because permission to distribute the 
+    project with GN material is not guaranteed.
+    
+5. To simplify the rules to few sentences:
+    * for any distribution that have to do with GN software,
+      you need to ask author for permission
+    * if you make a profit using GN software then share a 
+      participation on profit with GN author
+    * register GN shareware if you like it or delete it after trial use
+    * register GN shareware if you use free GN utilities for creating 
+      commercial midi files.
+
+  Author of GN utilities: Guenter Nagler
+  E-mail: info@gnmidi.com
+  Homepage: http://www.gnmidi.com

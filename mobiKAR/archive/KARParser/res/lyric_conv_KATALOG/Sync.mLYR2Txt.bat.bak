@@ -1,0 +1,1 @@
+java -cp ./ lyricconv.mLYR2Txt --milis 190000 tmp\0.mlyr tmp\0.new.txt

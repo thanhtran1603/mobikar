@@ -1,0 +1,1 @@
+java -cp ./ lyricconv.Txt2mLYR tmp\0.new.txt tmp\0.new.mlyr

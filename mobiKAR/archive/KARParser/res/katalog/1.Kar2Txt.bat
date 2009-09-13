@@ -1,0 +1,1 @@
+java -cp ./ lyricconv.Kar2Txt -q org.mid org.txt
