@@ -1,0 +1,5 @@
+SELECT id, title, artist 
+FROM tab_song, tab_order, con_song_product
+WHERE tab_order.id_user=1
+AND tab_order.id_product = con_song_product.id_product
+AND con_song_product.id_song=tab_song.id;

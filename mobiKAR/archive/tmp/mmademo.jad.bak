@@ -1,0 +1,25 @@
+MIDlet-Jar-Size: 168935
+MIDlet-Jar-URL: mmademo.jar
+Manifest-Version: 1.0
+MIDlet-2: Simple Player, /icons/App.png, example.mmademo.SimplePlayer
+MicroEdition-Configuration: CLDC-1.0
+MIDlet-Name: MMAPI demos
+Created-By: 1.4.2_02 (Sun Microsystems Inc.)
+MIDlet-Vendor: Sun Microsystems, Inc.
+MIDlet-Permissions: javax.microedition.io.Connector.http,javax.microed
+MIDlet-3: Video, /icons/App.png, example.mmademo.VideoTest
+MIDlet-1: Simple Tones, /icons/App.png, example.mmademo.SimpleTones
+MIDlet-Version: 1.0.3
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Description: Demo suite for MMAPI
+PlayerTitle-1: Bong [jar]
+PlayerTitle-10: Video Capture Simulation
+PlayerTitle-11: MPEG1 Video [http]
+PlayerTitle-2: MIDI Scale [jar]
+PlayerTitle-3: Simple Ring Tone [jar]
+PlayerTitle-4: WAV Music [http]
+PlayerTitle-5: MIDI scale [http]
+PlayerTitle-6: Animated GIF [jar]
+PlayerTitle-7: AMR Narrow Band [jar]
+PlayerTitle-8: AMR Wide Band [jar]
+PlayerTitle-9: Audio Capture from default device
